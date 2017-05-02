@@ -79,7 +79,7 @@ app.post('/webhook/', function (req, res) {
             else if(text === "(long pause) who?" || text === "who?") {knockJoke(sender, 10)}
 
             //random jokes
-            else if(text === "c" || text === "c) Random!" || text === "Random!")ds
+            else if(text === "c" || text === "c) Random!" || text === "Random!")
             {
                 randomJoke(sender)
             }
@@ -103,7 +103,7 @@ var token = "EAAU8jb5mZApwBANA5NhZAKGKoN1ZAgOEkli9cyGmxio1Ub7hxiI02VuGso3olBbHBq
 
 //sends to user a response
 function sendtoUser(sender, text) {
-
+    text = {text:text}
     //the message we want to send
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
@@ -186,7 +186,7 @@ function CSJoke(sender, b){
 }
 
 function knockJoke(sender, t)
-{}
+{
     k = Math.floor(Math.random() * (Math.floor(10) - Math.ceil(6)) + Math.ceil(6))
 
     //different knock knock jokes
